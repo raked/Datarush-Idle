@@ -7,7 +7,7 @@ function mineData(number) {
 }
 
 function buyNetworkConnections() {
-    let networkConnectionsCost = 40;
+    let networkConnectionsCost = 40 + Math.floor((Math.pow(1.1, networkConnections)));
     if (dataBalance >= networkConnectionsCost) {
         networkConnections++;
         dataBalance -= networkConnectionsCost;
