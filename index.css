@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 .container {
@@ -11,4 +12,18 @@
   text-align: center;
   justify-content: center;
   align-items: center;
+  background-color: lightgray;
+}
+
+.btncontainer button {
+  background: #555555;
+  border: 1px solid #555555;
+  color: white;
+  padding: 20px;
+  transition-duration: 0.4s;
+}
+
+.btncontainer button:hover {
+  background-color: #e7e7e7;
+  color: black;
 }

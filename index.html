@@ -8,6 +8,9 @@
     <title>Datarush Idle</title>
 
     <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet"> 
     <script src="js/index.js"></script>
 </head>
 
@@ -17,9 +20,11 @@
         <h2>Current data balance: <span id="dataBalance">0</span> <span id="unit">MB</span></h2>
         <h2>Network connections: <span id="networkConnections">0</span></h2>
         <h2>Click factor: <span id="clickFactor">1</span></h2>
+        <div class="btncontainer">
         <button onclick="mineData(1)">Mine Data</button>
         <button onclick="buyNetworkConnections()">Buy Network Connections</button>
         <button onclick="buyClickFactor()">Buy Click Factor</button>
+        </div>
     </div>
 </body>
 
