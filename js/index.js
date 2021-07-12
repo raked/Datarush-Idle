@@ -1,11 +1,26 @@
 let dataBalance = 0;
 let networkConnections = 0;
 let clickFactor = 1;
+let clickCombo = 1;
 
 function mineData(number) {
-    dataBalance += number * clickFactor;
-    document.getElementById("dataBalance").innerHTML = dataBalance;
+    clickCombo += .5;
+    let clickComboDisplay = clickCombo.toFixed(2);
+    dataBalance += number * clickFactor * clickCombo;
+    dataBalanceDisplay = dataBalance.toFixed(2);
+    document.getElementById("dataBalance").innerHTML = dataBalanceDisplay;
+    document.getElementById("clickCombo").innerHTML = clickComboDisplay;
 }
+
+function clickComboDecay(){
+    if (clickCombo > 1){
+        clickCombo -= .25;
+        let clickComboDisplay = clickCombo.toFixed(2);
+        document.getElementById("clickCombo").innerHTML = clickComboDisplay;
+    }
+}
+
+setInterval("clickComboDecay()", 1000)
 
 function buyNetworkConnections() {
     let networkConnectionsCost = 40 + Math.floor((Math.pow(1.1, networkConnections)));
