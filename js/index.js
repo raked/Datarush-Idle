@@ -66,7 +66,7 @@ function randomReward(){
     parentDiv.appendChild(rewardButton);
     imgElem.src = "assets/images/spider_from_datarush.png";
     determiningNumber = Math.random();
-    if(determiningNumber < 1){
+    if(determiningNumber < 0.001){
         rewardButton.appendChild(imgElem);
 
         let randomTop = getRandomNumber(0, winHeight - 125);
