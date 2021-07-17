@@ -61,10 +61,13 @@ function randomReward(){
     let winHeight = window.innerHeight;
     let imgElem = document.createElement("img");
     bodyDiv.appendChild(parentDiv);
+    let rewardButton = document.createElement("button");
+    rewardButton.setAttribute("class", "rewardButton");
+    parentDiv.appendChild(rewardButton);
     imgElem.src = "assets/images/spider_from_datarush.png";
     determiningNumber = Math.random();
-    if(determiningNumber < 0.001){
-        parentDiv.appendChild(imgElem);
+    if(determiningNumber < 1){
+        rewardButton.appendChild(imgElem);
 
         let randomTop = getRandomNumber(0, winHeight - 125);
         let randomLeft = getRandomNumber(0, winWidth - 125);
