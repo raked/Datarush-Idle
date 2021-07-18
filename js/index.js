@@ -50,6 +50,10 @@ function networkConnectionsWork(){
     }
 }
 
+function randomRewardOnClick(newDivName){
+    newDivName.remove();
+    dataBalance += 500 + Math.floor(Math.pow(1.1, networkConnections));
+}
 
 function randomReward(){
     let bodyDiv = document.body;
@@ -63,10 +67,12 @@ function randomReward(){
     bodyDiv.appendChild(parentDiv);
     let rewardButton = document.createElement("button");
     rewardButton.setAttribute("class", "rewardButton");
+    rewardButtonOnClick = "randomRewardOnClick" + "(" + newDivName +")";
+    rewardButton.setAttribute("onclick", rewardButtonOnClick)
     parentDiv.appendChild(rewardButton);
     imgElem.src = "assets/images/spider_from_datarush.png";
     determiningNumber = Math.random();
-    if(determiningNumber < 0.001){
+    if(determiningNumber < .001){
         rewardButton.appendChild(imgElem);
 
         let randomTop = getRandomNumber(0, winHeight - 125);
