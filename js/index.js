@@ -53,6 +53,7 @@ function networkConnectionsWork(){
 function randomRewardOnClick(newDivName){
     newDivName.remove();
     dataBalance += 500 + Math.floor(Math.pow(1.1, networkConnections));
+    document.getElementById("dataBalance").innerHTML = dataBalance;
 }
 
 function randomReward(){
