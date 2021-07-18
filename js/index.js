@@ -58,21 +58,23 @@ function randomRewardOnClick(newDivName){
 function randomReward(){
     let bodyDiv = document.body;
     let newDivName = "randomReward" + enemyCounter;
-    let parentDiv = document.createElement("div");
-    parentDiv.setAttribute("id", newDivName);
-    parentDiv.setAttribute("class", "randomReward");
     let winWidth = window.innerWidth;
     let winHeight = window.innerHeight;
-    let imgElem = document.createElement("img");
-    bodyDiv.appendChild(parentDiv);
-    let rewardButton = document.createElement("button");
-    rewardButton.setAttribute("class", "rewardButton");
     rewardButtonOnClick = "randomRewardOnClick" + "(" + newDivName +")";
-    rewardButton.setAttribute("onclick", rewardButtonOnClick)
-    parentDiv.appendChild(rewardButton);
-    imgElem.src = "assets/images/spider_from_datarush.png";
     determiningNumber = Math.random();
-    if(determiningNumber < .001){
+    if(determiningNumber < .01){
+        let parentDiv = document.createElement("div");
+        parentDiv.setAttribute("id", newDivName);
+        parentDiv.setAttribute("class", "randomReward");
+
+        let imgElem = document.createElement("img");
+        imgElem.src = "assets/images/spider_from_datarush.png";
+        bodyDiv.appendChild(parentDiv);
+        let rewardButton = document.createElement("button");
+        rewardButton.setAttribute("class", "rewardButton");
+        rewardButton.setAttribute("onclick", rewardButtonOnClick)
+        parentDiv.appendChild(rewardButton);
+
         rewardButton.appendChild(imgElem);
 
         let randomTop = getRandomNumber(0, winHeight - 125);
