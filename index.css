@@ -45,3 +45,9 @@
   top: 100px;
   left: 100px;
 }
+
+.rewardButton {
+  background: transparent;
+  border: none !important;
+  cursor: pointer;
+}
